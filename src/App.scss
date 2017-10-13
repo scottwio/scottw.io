@@ -1,0 +1,85 @@
+@import 'variables.scss';
+
+@font-face {
+  font-family: "graphik-light";
+  src: url('./assets/fonts/graphik-light.ttf') format('truetype'),
+      url('./assets/fonts/graphik-light.otf') format('otf'),
+      url('./assets/fonts/graphik-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "graphik-medium";
+  src: url('./assets/fonts/graphik-medium.ttf') format('truetype'),
+      url('./assets/fonts/graphik-medium.otf') format('otf'),
+      url('./assets/fonts/graphik-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "mydevicons";
+  src: url('./assets/fonts/mydevicons.ttf') format('truetype'),
+      url('./assets/fonts/mydevicons.eot') format('eot'),
+      url('./assets/fonts/mydevicons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html {
+  color: $black;
+  font-family: 'graphik-light', Arial, Helvetica, sans-serif;
+  background-color:$black;
+}
+
+
+html, body{
+  height:100%;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+  font-weight: normal;
+  font-family: 'graphik-medium', Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// menu controls 
+
+#root{
+  height:100%;
+}
+
+.is-menu-open {
+  perspective: 4000px;
+  perspective-origin: 50% 50%;
+  .Page {
+    opacity: 0.58;
+    transform: scale(0.9) scaleZ(1) rotateX(-15deg) translateY(80px);
+  }
+}
+
+.MasterContainer{
+  height:100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.Page {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;   
+  &.Page--black{
+    color: #ffffff;
+    background-color: $black;
+  }
+}
+

@@ -1,0 +1,12 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.Project {
+  > h4 {
+    @include font-title-light();
+  }
+}
+
+.Project-icons {
+  font-family: $font-icons;
+}

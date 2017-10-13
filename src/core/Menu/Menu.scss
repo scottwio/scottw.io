@@ -1,0 +1,107 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+$burger-height: 50px;
+$burger-width: 50px;
+
+.Menu {
+  position: absolute;
+  width: 100%;
+}
+
+.Menu-inner{
+  padding: 0 40px;
+  @include container();
+}
+
+.Burger{
+  cursor: pointer;
+  position: absolute; 
+  right:0;
+  top: 34px;
+  height: $burger-height;
+  width: $burger-width;
+  transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99),-webkit-transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.Burger-container{
+  width:100%;
+  position: relative;
+}
+
+.Burger-item{
+  position: absolute; 
+  height: $burger-height;
+  width: $burger-width;
+  transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  > span {
+    transition: all 0.2s ease-in;
+    display: block;
+    height: 2px;
+    width:100%;
+    background-color: $black;
+  }
+  &:nth-child(1){
+    > span {
+      transform: translateY(-8px);
+      position: absolute;
+      top:$burger-height / 2;
+    }
+  }
+  &:nth-child(2){
+    > span {
+      transform: translateY(8px);
+      position: absolute;
+      top:$burger-height / 2;
+    }
+  }
+}
+
+.Nav{
+  padding-top: 46px;
+  @include container();
+  a {
+    margin-left: 35px;
+    color: #ffffff;
+    @include font-body();
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+
+  .Nav-outline{
+    border-radius: 8px;
+    padding: 14px 26px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #ffffff;
+      color: $black;  
+      border-color: #ffffff;
+    }
+  }
+}
+
+.is-menu-open {
+  .Burger{
+    transform: rotate(90deg);
+  }
+  .Burger-item{
+    > span {
+      background-color: #ffffff;
+    } 
+    &:nth-child(1){
+      transform: rotate(45deg);
+      > span {
+        transform: translateY(0px);
+      }
+    }
+    &:nth-child(2){
+      transform: rotate(-45deg);
+      > span {
+        transform: translateY(0px);
+      }
+    }
+  }
+} 

@@ -1,0 +1,82 @@
+/* Hide text off screen */
+.Menu {
+  position: absolute;
+  width: 100%; }
+
+.Menu-inner {
+  padding: 0 40px;
+  max-width: 1020px;
+  margin: 0 auto; }
+
+.Burger {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 34px;
+  height: 50px;
+  width: 50px;
+  transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
+
+.Burger-container {
+  width: 100%;
+  position: relative; }
+
+.Burger-item {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
+  .Burger-item > span {
+    transition: all 0.2s ease-in;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #1f1f1f; }
+  .Burger-item:nth-child(1) > span {
+    transform: translateY(-8px);
+    position: absolute;
+    top: 25px; }
+  .Burger-item:nth-child(2) > span {
+    transform: translateY(8px);
+    position: absolute;
+    top: 25px; }
+
+.Nav {
+  padding-top: 46px;
+  max-width: 1020px;
+  margin: 0 auto; }
+  .Nav a {
+    margin-left: 35px;
+    color: #ffffff;
+    font-weight: normal;
+    font-family: "graphik-light", Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-size: 1.75rem; }
+    .Nav a:first-child {
+      margin-left: 0; }
+  .Nav .Nav-outline {
+    border-radius: 8px;
+    padding: 14px 26px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; }
+    .Nav .Nav-outline:hover {
+      background-color: #ffffff;
+      color: #1f1f1f;
+      border-color: #ffffff; }
+
+.is-menu-open .Burger {
+  transform: rotate(90deg); }
+
+.is-menu-open .Burger-item > span {
+  background-color: #ffffff; }
+
+.is-menu-open .Burger-item:nth-child(1) {
+  transform: rotate(45deg); }
+  .is-menu-open .Burger-item:nth-child(1) > span {
+    transform: translateY(0px); }
+
+.is-menu-open .Burger-item:nth-child(2) {
+  transform: rotate(-45deg); }
+  .is-menu-open .Burger-item:nth-child(2) > span {
+    transform: translateY(0px); }

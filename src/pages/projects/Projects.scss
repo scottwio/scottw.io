@@ -1,0 +1,8 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.Projects {
+  padding-top: 100px;
+  @include font-title-light();
+  @include container();
+}

@@ -1,0 +1,11 @@
+/* Hide text off screen */
+.Project > h4 {
+  margin: 0;
+  font-weight: normal;
+  font-family: "graphik-light", Arial, Helvetica, sans-serif;
+  line-height: 192%;
+  font-size: 34px;
+  font-size: 2.125rem; }
+
+.Project-icons {
+  font-family: "mydevicons", Arial, Helvetica, sans-serif; }
