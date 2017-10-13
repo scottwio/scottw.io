@@ -1,6 +1,6 @@
 // actions
 const toggleMenuAction = 'TOGGLE_MENU';
-export const toggleMenu = () => {
+const toggleMenu = () => {
   return {
     type: toggleMenuAction,
   };
@@ -21,5 +21,4 @@ class MenuModel {
   public open = false;
 }
 
-export { menuReducer }; 
-export { MenuModel };
+export { menuReducer, toggleMenu, MenuModel}; 

@@ -2,11 +2,28 @@
 @import 'mixins.scss';
 
 .Project {
+  cursor: pointer;
   > h4 {
     @include font-title-light();
+  }
+  &:hover {
+    > h4 {
+      text-decoration: underline;
+    }
   }
 }
 
 .Project-icons {
   font-family: $font-icons;
+  margin-left: 38px;
+  line-height: 22px;
+  margin-bottom: 56px;
+  > span {
+    @include x-fontSize(26px);
+    display: inline-block;
+    margin-left: 14px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
 }

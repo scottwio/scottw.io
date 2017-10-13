@@ -2,8 +2,12 @@ import './Project.css';
 import * as React from 'react';
 import { ProjectModel } from '../../../reducers/projects';
 
-let Project: any = (props: ProjectModel) => (
-  <div className="Project">
+interface IProjectProps extends ProjectModel {
+  link: any;
+}
+
+let Project: any = (props: IProjectProps) => (
+  <div className="Project" onClick={() => {props.link(`project-details/${props.uri}`); }}>
     <h4>{props.title}</h4>
     <div className="Project-icons">{props.icons.map((icon) => (<span key={icon.id}>{icon.key}</span>))}</div>
   </div>

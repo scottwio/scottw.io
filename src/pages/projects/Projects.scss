@@ -2,7 +2,7 @@
 @import 'mixins.scss';
 
 .Projects {
-  padding-top: 100px;
   @include font-title-light();
   @include container();
+  padding: 100px 50px 0  50px;
 }

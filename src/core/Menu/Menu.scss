@@ -7,6 +7,9 @@ $burger-width: 50px;
 .Menu {
   position: absolute;
   width: 100%;
+  a {
+    cursor: pointer;
+  }
 }
 
 .Menu-inner{

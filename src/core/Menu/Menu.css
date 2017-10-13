@@ -2,6 +2,8 @@
 .Menu {
   position: absolute;
   width: 100%; }
+  .Menu a {
+    cursor: pointer; }
 
 .Menu-inner {
   padding: 0 40px;

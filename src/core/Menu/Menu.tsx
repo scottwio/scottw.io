@@ -14,7 +14,7 @@ const Menu = (props) => (
         <nav className="Nav">
           <a onClick={() => { props.link('/'); }}>Home</a>
           <a className="Nav-outline" onClick={() => { props.link('/projects'); }}>+ Projects</a>
-          <a onClick={() => { props.link('/about'); }}>+ Projects</a>
+          <a onClick={() => { props.link('/about'); }}>About</a>
         </nav>
         : ''
       }
