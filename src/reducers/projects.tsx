@@ -1,4 +1,4 @@
-import { fetchProjects } from '../lib/projectsService';
+import { fetchProjects } from '../lib/projectService';
 
 interface IGetProjectSucess {
   type: string;

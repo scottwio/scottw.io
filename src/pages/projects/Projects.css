@@ -3,9 +3,12 @@
   margin: 0;
   font-weight: normal;
   font-family: "graphik-light", Arial, Helvetica, sans-serif;
-  line-height: 192%;
+  line-height: 4.0625rem;
   font-size: 34px;
   font-size: 2.125rem;
   max-width: 1020px;
   margin: 0 auto;
-  padding: 100px 50px 0  50px; }
+  padding: 100px 50px 200px; }
+  @media screen and (max-width: 600px) {
+    .Projects {
+      padding: 100px 20px 200px; } }

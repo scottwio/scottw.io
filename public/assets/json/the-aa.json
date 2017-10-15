@@ -1,0 +1,23 @@
+{
+  "uri": "the-aa",
+  "title": "The AA - My AA",
+  "description": "My AA brings all of The AA services under one roof. The site gives customers access to all their breakdown and insurance details as well as the ability to report vehicle breakdowns and view exclusive offers. The SPA application was built against a JSON API.",
+  "link": {"text": "www.theaa.com", "url": "http://www.theaa.com/"},
+  "heroImage": {"url": "/assets/images/hero-the-aa.jpg", "positionX": "center" },
+  "images": [
+    {"type": "browser", "url":"http://www.myimage.com"}
+  ],
+  "icons": [
+    {"name":"Javascript", "id":1, "key":"n"},
+    {"name":"Angular JS", "id":2, "key":"p"},
+    {"name":"Grunt", "id":3, "key":"o"},
+    {"name":"Sass", "id":4, "key":"f"},
+    {"name":"CSS", "id":5, "key":"m"},
+    {"name":"HTML5", "id":6, "key":"l"}
+  ],
+  "moreWork": [
+    {"text": "Circus Street", "uri": "circus-street"},
+    {"text": "The AA", "uri": "the-aa"},
+    {"text": "Monarch", "uri": "monarch"}
+  ]
+}

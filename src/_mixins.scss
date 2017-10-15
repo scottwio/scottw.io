@@ -1,0 +1,82 @@
+/// Project
+
+@mixin font-title(){
+  font-weight: normal;
+  line-height: calculateRem(65px);
+  margin: 0;
+  @include x-fontSize($font-size-title);
+}
+
+@mixin font-title-light(){
+  margin: 0;
+  font-weight: normal;
+  font-family: $font-body;
+  line-height: calculateRem(65px);
+  @include x-fontSize($font-size-title);
+}
+
+@mixin font-body(){
+  font-weight: normal;
+  font-family: $font-body;
+  line-height: calculateRem(65px);
+  @include x-fontSize($font-size-body);
+}
+
+
+@mixin font-body-heavy(){
+  font-weight: normal;
+  font-family: $font-heading;
+  line-height: calculateRem(65px);
+  @include x-fontSize($font-size-body);
+}
+
+@mixin container(){
+  max-width: $body-width-max;
+  margin: 0 auto;
+}
+
+@mixin side-pad($top:0, $bottom:0){
+  padding: $top 50px $bottom;
+  @media screen and (max-width: $cat) {
+      padding: $top 20px $bottom;
+  }
+}
+
+
+/// utils
+
+@mixin x-clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+//Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin x-fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+/* Hide text off screen */
+@mixin x-hideText() {
+  .hideText {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px; /* IE 6/7 fallback */
+  }
+  .hideText:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}

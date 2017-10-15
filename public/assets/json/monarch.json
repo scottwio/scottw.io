@@ -1,0 +1,20 @@
+{
+  "uri": "monarch",
+  "title": "Monarch Airlines - Booking path",
+  "description": "I worked at Monarch Airlines to create their next-generation flight booking application. The application was built using Angular 2+, typescript and ngrx stores. I was responsible for the complete architecture and delivery of the javascript application.",
+  "images": [{"type": "browser", "url":"http://www.myimage.com"}],
+  "heroImage": {"url": "/assets/images/hero-monarch.jpg", "positionX": "right" },
+  "icons": [
+    {"name":"Typescript", "id":1, "key":"e"},
+    {"name":"Angular", "id":2, "key":"a"},
+    {"name":"Webpack", "id":3, "key":"d"},
+    {"name":"Sass", "id":4, "key":"f"},
+    {"name":"CSS", "id":5, "key":"m"},
+    {"name":"HTML5", "id":6, "key":"l"}
+  ],
+  "moreWork": [
+    {"text": "Circus Street", "uri": "circus-street"},
+    {"text": "The AA", "uri": "the-aa"},
+    {"text": "Monarch", "uri": "monarch"}
+  ]
+}

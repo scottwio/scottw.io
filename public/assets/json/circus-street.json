@@ -1,0 +1,22 @@
+{
+  "uri": "circus-street",
+  "title": "Circus Street - Learning interface",
+  "description": "Circus Street is a learning platform that teaches thousands of people digital marketing every month. I worked on the main learning interface which is built in Angular 1.x. One codebase serves as both the web application and hybrid mobile application.",
+  "link": {"text": "www.circusstreet.com", "url": "https://circusstreet.com/"},
+  "images": [{"type": "browser", "url":"http://www.myimage.com"}],
+  "heroImage": {"url": "/assets/images/hero-circus-street.jpg", "positionX": "center" },
+  "icons": [
+    {"name":"Javascript", "id":1, "key":"n"},
+    {"name":"Angular JS", "id":2, "key":"p"},
+    {"name":"Cordova", "id":3, "key":"b"},
+    {"name":"Grunt", "id":4, "key":"o"},
+    {"name":"Sass", "id":5, "key":"f"},
+    {"name":"CSS", "id":6, "key":"m"},
+    {"name":"HTML5", "id":7, "key":"l"}
+  ],
+  "moreWork": [
+    {"text": "Circus Street", "uri": "circus-street"},
+    {"text": "The AA", "uri": "the-aa"},
+    {"text": "monarch", "uri": "monarch"}
+  ]
+}

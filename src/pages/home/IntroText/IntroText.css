@@ -1,27 +1,33 @@
 /* Hide text off screen */
 .IntroText {
-  padding-top: 100px; }
+  padding-top: 100px;
+  padding-bottom: 200px; }
   .IntroText > h2 {
     font-weight: normal;
-    line-height: 192%;
+    line-height: 4.0625rem;
     margin: 0;
     font-size: 34px;
     font-size: 2.125rem;
-    margin-bottom: 26px; }
+    margin-bottom: 1.625rem; }
   .IntroText > h3 {
     margin: 0;
     font-weight: normal;
     font-family: "graphik-light", Arial, Helvetica, sans-serif;
-    line-height: 192%;
+    line-height: 4.0625rem;
     font-size: 34px;
     font-size: 2.125rem; }
     .IntroText > h3 > a {
       color: #1f1f1f;
       border-radius: 8px;
-      padding: 12px;
+      padding: 0 0.75rem;
       border: 1px solid #979797;
-      transition: all 0.5s ease-in; }
+      transition: all 0.5s ease-in;
+      display: inline-block; }
       .IntroText > h3 > a:hover {
         text-decoration: none;
         background-color: #979797;
         color: #ffffff; }
+
+@media screen and (max-width: 600px) {
+  .IntroText > h2 {
+    padding-right: 100px; } }

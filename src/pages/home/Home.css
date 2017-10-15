@@ -2,4 +2,7 @@
 .Home {
   max-width: 1020px;
   margin: 0 auto;
-  padding: 0 50px; }
+  padding: 0 50px 0; }
+  @media screen and (max-width: 600px) {
+    .Home {
+      padding: 0 20px 0; } }

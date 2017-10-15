@@ -3,5 +3,5 @@
 
 .Home{
   @include container();
-  padding: 0 50px;
+  @include side-pad();
 }

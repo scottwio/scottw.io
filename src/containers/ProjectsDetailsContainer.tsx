@@ -1,17 +1,22 @@
 import { connect } from 'react-redux';
-import { getProjectsAction } from '../reducers/projects';
 import { ProjectDetails } from '../pages/projectDetails/ProjectDetails';
+import { getProjectsDetailsAction } from '../reducers/projectDetails';
+import { push } from 'react-router-redux';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    projectDetails: state.projects
+    projectDetails: state.projectDetails,
+    projectUri: ownProps.match.params.uri
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    getProjects: () => {
-      dispatch(getProjectsAction());
+    getProjectDetails: (uri: string) => {
+      dispatch(getProjectsDetailsAction(uri));
+    },
+    link: (url) => {
+      dispatch(push(url));
     }
   };
 };

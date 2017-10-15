@@ -13,7 +13,7 @@ $burger-width: 50px;
 }
 
 .Menu-inner{
-  padding: 0 40px;
+  padding: 0 calculateRem(40px);
   @include container();
 }
 
@@ -21,10 +21,10 @@ $burger-width: 50px;
   cursor: pointer;
   position: absolute; 
   right:0;
-  top: 34px;
+  top: calculateRem(34px);
   height: $burger-height;
   width: $burger-width;
-  transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99),-webkit-transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 }
 
 .Burger-container{
@@ -36,9 +36,9 @@ $burger-width: 50px;
   position: absolute; 
   height: $burger-height;
   width: $burger-width;
-  transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   > span {
-    transition: all 0.2s ease-in;
+    transition: background-color 0.2s ease-in, transform 0.2s ease-in;
     display: block;
     height: 2px;
     width:100%;
@@ -60,11 +60,25 @@ $burger-width: 50px;
   }
 }
 
+.is-dark{
+  .Burger-item{
+    > span {
+      background-color: #ffffff;
+    }
+  }
+}
+
 .Nav{
-  padding-top: 46px;
+  padding-top: calculateRem(46px);
   @include container();
+  li{
+    display: inline-block;
+    margin-left: calculateRem(35px);
+    @media screen and (max-width: $cat) {
+      display: block;
+    }
+  }
   a {
-    margin-left: 35px;
     color: #ffffff;
     @include font-body();
     &:first-child{
@@ -74,7 +88,7 @@ $burger-width: 50px;
 
   .Nav-outline{
     border-radius: 8px;
-    padding: 14px 26px;
+    padding: calculateRem(14px) calculateRem(26px);
     border: 1px solid #ffffff;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -108,3 +122,4 @@ $burger-width: 50px;
     }
   }
 } 
+

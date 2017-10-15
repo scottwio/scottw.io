@@ -11,11 +11,11 @@ const Menu = (props) => (
         </div>
       </div>
       {props.menu.open ?
-        <nav className="Nav">
-          <a onClick={() => { props.link('/'); }}>Home</a>
-          <a className="Nav-outline" onClick={() => { props.link('/projects'); }}>+ Projects</a>
-          <a onClick={() => { props.link('/about'); }}>About</a>
-        </nav>
+        <ul className="Nav">
+          <li><a onClick={() => { props.link('/'); }}>Home</a></li>
+          <li><a className="Nav-outline" onClick={() => { props.link('/projects'); }}>+ Projects</a></li>
+          {/* <a onClick={() => { props.link('/about'); }}>About</a> */}
+        </ul>
         : ''
       }
     </div>

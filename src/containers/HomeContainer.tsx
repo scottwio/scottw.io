@@ -21,4 +21,4 @@ const HomeContainer = connect(
   mapDispatchToProps
 )(Home);
 
-export  {HomeContainer};
+export  { HomeContainer };

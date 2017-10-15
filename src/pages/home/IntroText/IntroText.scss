@@ -3,23 +3,33 @@
 
 .IntroText  {
   padding-top: 100px;
+  padding-bottom: 200px;
   > h2{
     @include font-title();
-    margin-bottom: 26px;
+    margin-bottom: calculateRem(26px);
   }
   > h3 {
     @include font-title-light();
     > a {
       color: $black;
       border-radius: 8px;
-      padding: 12px;
+      padding: 0 calculateRem(12px);
       border: 1px solid #979797;
       transition: all 0.5s ease-in;
+      display: inline-block;
       &:hover {
         text-decoration: none;
         background-color: #979797;
         color: #ffffff;
       }
+    }
+  }
+}
+
+@media screen and (max-width: $cat) {
+  .IntroText  {
+    > h2{
+      padding-right: 100px;
     }
   }
 }

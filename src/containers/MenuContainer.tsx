@@ -15,6 +15,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(toggleMenu());
     },
     link: (url) => {
+      dispatch(toggleMenu());
       dispatch(push(url));
     }
   };

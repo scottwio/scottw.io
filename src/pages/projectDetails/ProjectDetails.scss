@@ -1,0 +1,72 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.ProjectDetails {
+  height:100%;
+  h1 {
+    @include font-body-heavy();
+    margin-bottom: 0;
+    margin-top:0;
+    padding-top: calculateRem(183px); 
+  }
+  p {
+    @include font-body();
+    &:first-of-type{
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: calculateRem(22px);
+    }
+  }
+}
+
+.ProjectDetails-hero {
+  height:100%;
+  height: 966px;
+  background-size: cover !important;
+  @media screen and (max-width: $cat) {
+    height: 550px;
+  }
+  @media screen and (max-width: $chicken) {
+    height: 505px;
+  }
+}
+
+.ProjectDetails-link {
+  color: #000000;
+  > span {
+    height: 34px;
+    width: 45px;
+    display: inline-block;
+    background: url(/assets/images/link-arrow.svg) no-repeat left center;
+  }
+}
+
+.ProjectDetails-icons{
+  margin-top: calculateRem(144px);
+  font-family: $font-icons;
+  font-size: calculateRem(38px);
+  > span {
+    margin-right: calculateRem(15px);
+  }
+}
+
+
+.MoreWork {
+  width:100%;
+  background-color: $black;
+  color: #ffffff;
+  margin-top: calculateRem(160px);
+  padding-top: calculateRem(140px);
+  padding-bottom: calculateRem(140px);
+  h4 {
+    @include font-body-heavy();
+    margin-bottom:6px;
+  }
+  ul{
+    margin-left: calculateRem(40px);
+  }
+  a{
+    color: #ffffff;
+  }
+}

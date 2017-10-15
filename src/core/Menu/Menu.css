@@ -6,7 +6,7 @@
     cursor: pointer; }
 
 .Menu-inner {
-  padding: 0 40px;
+  padding: 0 2.5rem;
   max-width: 1020px;
   margin: 0 auto; }
 
@@ -14,10 +14,10 @@
   cursor: pointer;
   position: absolute;
   right: 0;
-  top: 34px;
+  top: 2.125rem;
   height: 50px;
   width: 50px;
-  transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
+  transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
 
 .Burger-container {
   width: 100%;
@@ -27,9 +27,9 @@
   position: absolute;
   height: 50px;
   width: 50px;
-  transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
+  transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99); }
   .Burger-item > span {
-    transition: all 0.2s ease-in;
+    transition: background-color 0.2s ease-in, transform 0.2s ease-in;
     display: block;
     height: 2px;
     width: 100%;
@@ -43,22 +43,31 @@
     position: absolute;
     top: 25px; }
 
+.is-dark .Burger-item > span {
+  background-color: #ffffff; }
+
 .Nav {
-  padding-top: 46px;
+  padding-top: 2.875rem;
   max-width: 1020px;
   margin: 0 auto; }
+  .Nav li {
+    display: inline-block;
+    margin-left: 2.1875rem; }
+    @media screen and (max-width: 600px) {
+      .Nav li {
+        display: block; } }
   .Nav a {
-    margin-left: 35px;
     color: #ffffff;
     font-weight: normal;
     font-family: "graphik-light", Arial, Helvetica, sans-serif;
+    line-height: 4.0625rem;
     font-size: 28px;
     font-size: 1.75rem; }
     .Nav a:first-child {
       margin-left: 0; }
   .Nav .Nav-outline {
     border-radius: 8px;
-    padding: 14px 26px;
+    padding: 0.875rem 1.625rem;
     border: 1px solid #ffffff;
     text-decoration: none;
     transition: all 0.3s ease-in-out; }

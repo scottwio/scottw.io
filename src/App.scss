@@ -1,10 +1,11 @@
 @import 'variables.scss';
+@import 'mixins.scss';
 
 @font-face {
   font-family: "graphik-light";
-  src: url('./assets/fonts/graphik-light.ttf') format('truetype'),
-      url('./assets/fonts/graphik-light.otf') format('otf'),
-      url('./assets/fonts/graphik-light.woff') format('woff');
+  src: url('/assets/fonts/graphik-light.ttf') format('truetype'),
+      url('/assets/fonts/graphik-light.otf') format('otf'),
+      url('/assets/fonts/graphik-light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,9 +13,9 @@
 
 @font-face {
   font-family: "graphik-medium";
-  src: url('./assets/fonts/graphik-medium.ttf') format('truetype'),
-      url('./assets/fonts/graphik-medium.otf') format('otf'),
-      url('./assets/fonts/graphik-medium.woff') format('woff');
+  src: url('/assets/fonts/graphik-medium.ttf') format('truetype'),
+      url('/assets/fonts/graphik-medium.otf') format('otf'),
+      url('/assets/fonts/graphik-medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -22,9 +23,9 @@
 
 @font-face {
   font-family: "mydevicons";
-  src: url('./assets/fonts/mydevicons.ttf') format('truetype'),
-      url('./assets/fonts/mydevicons.eot') format('eot'),
-      url('./assets/fonts/mydevicons.woff') format('woff');
+  src: url('/assets/fonts/mydevicons.ttf') format('truetype'),
+      url('/assets/fonts/mydevicons.eot') format('eot'),
+      url('/assets/fonts/mydevicons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -34,8 +35,10 @@ html {
   color: $black;
   font-family: 'graphik-light', Arial, Helvetica, sans-serif;
   background-color:$black;
+  @media screen and (max-width: $cat) {
+    font-size: 12px;
+  }
 }
-
 
 html, body{
   height:100%;
@@ -43,7 +46,8 @@ html, body{
 
 body {
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
+  @include font-body();
 }
 
 h1, h2, h3, h4, h5, h6, h7 {
@@ -58,19 +62,29 @@ a {
   }
 }
 
-// menu controls 
-
-#root{
-  height:100%;
+ul {
+  margin:0;
+  padding:0;
+  list-style: none;
 }
 
-.is-menu-open {
-  perspective: 4000px;
-  perspective-origin: 50% 50%;
-  .Page {
-    opacity: 0.58;
-    transform: scale(0.9) scaleZ(1) rotateX(-15deg) translateY(80px);
-  }
+// utilities classes
+.u-fullHeight{
+  height:100%;
+  display: block;
+}
+
+.u-container{
+  @include container();
+}
+
+.u-side-pad {
+  @include side-pad();
+}
+
+// main wrappers
+#root{
+  height:100%;
 }
 
 .MasterContainer{
@@ -79,14 +93,9 @@ a {
 }
 
 .Page {
-
-  height: 100%;
-  transition: all 0.3s ease-in-out;
+  min-height: 100%;
+  transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out, background-color 0.8s ease-in-out;
   background-color: #ffffff;   
-  &.Page--black{
-    color: #ffffff;
-    background-color: $black;
-  }
 }
 
 .Page-block{
@@ -96,4 +105,24 @@ a {
   left:0;
   right:0;
   margin: 0 auto;
+}
+
+// mods
+.is-menu-open {
+  overflow: hidden; // covers some of the margins
+  .Page {
+    height: 100%;
+    opacity: 0.58;
+    transform: scale(0.9) translateY(120px);
+    @media screen and (max-width: $cat) {
+      transform: scale(0.9) translateY(180px);
+    }
+  }
+}
+
+.is-dark {
+  .Page {
+    color: #ffffff;
+    background-color: $black;
+  }
 }
