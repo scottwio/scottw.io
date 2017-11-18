@@ -14,9 +14,6 @@ workflows:
                 - master
 jobs:
   build:
-    branches:
-      only:
-        - master
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
