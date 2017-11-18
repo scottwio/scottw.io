@@ -5,7 +5,7 @@
 version: 2
 workflows:
   version: 2
-  build:
+  build-to-aws:
     jobs: 
       - build:
           filters:
@@ -34,7 +34,15 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-
+      - run:
+        name: Install dependencies
+        working_directory: /
+        command: |
+          apt-get -y -qq update
+          apt-get -y -qq install python3.4-dev
+          curl -O https://bootstrap.pypa.io/get-pip.py
+          python3.4 get-pip.py --user
+          pip install awscli --upgrade --user
       - run: yarn install
 
       - save_cache:
