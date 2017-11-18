@@ -1,0 +1,6 @@
+{
+  "uri": "about",
+  "title": "About me",
+  "description": "<p>Hi, my name is Scott Williams. I’m a front-end developer and a self-confessed code and design geek. I discovered my passion for technology and design at a young age. While learning the skills to become a web designer, I became obsessed with the web technologies. I grabbed some books and taught myself how to code HTML and, well, the rest is history.</p><p>These days you can find me honing my Javascript skills and learning whatever the latest hot framework or library currently is.</p>",
+  "heroImage": {"url": "/assets/images/me.jpg", "positionX": "center" }
+}

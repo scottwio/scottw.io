@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { toggleMenu } from '../reducers/menu';
+import { toggleMenu } from '../store/menu';
 import { Menu } from '../core/Menu/Menu';
-import { push } from 'react-router-redux';
+import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -15,15 +15,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(toggleMenu());
     },
     link: (url) => {
+      ownProps.router.history.push(url);
       dispatch(toggleMenu());
-      dispatch(push(url));
     }
   };
 };
 
-const MenuContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Menu);
+const MenuContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(Menu));
 
-export  {MenuContainer};
+export { MenuContainer };

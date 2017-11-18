@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { Home } from '../pages/home/Home';
-import { toggleMenu } from '../reducers/menu';
+import { toggleMenu } from '../store/menu';
+import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -16,9 +17,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-const HomeContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home);
+const HomeContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
 
 export  { HomeContainer };

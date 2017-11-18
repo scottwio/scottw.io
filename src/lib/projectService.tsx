@@ -18,7 +18,6 @@ const fetchProjects = () => {
  * @param {String} uri - uri of project
  */
 const fetchProjectDetails = (uri: string) => {
-  console.log(uri);
   return fetch(`/assets/json/${uri}.json`, {
     method: 'GET',
     headers: {

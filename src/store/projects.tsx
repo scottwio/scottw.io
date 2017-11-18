@@ -33,7 +33,7 @@ function projectsReducer(state: ProjectsModel = new ProjectsModel(), action: any
 
 // thunks 
 function getProjectsAction() {  
-    return function (dispatch: any) {
+    return (dispatch: any) => {
       return fetchProjects().then(
         res => dispatch(getProjectSucess(res)),
         error => dispatch(getProjectError(error))

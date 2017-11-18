@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { ProjectDetails } from '../pages/projectDetails/ProjectDetails';
-import { getProjectsDetailsAction } from '../reducers/projectDetails';
-import { push } from 'react-router-redux';
+import { getProjectsDetailsAction } from '../store/projectDetails';
+import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -16,14 +16,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(getProjectsDetailsAction(uri));
     },
     link: (url) => {
-      dispatch(push(url));
+      ownProps.history.push(url);
     }
   };
 };
 
-const ProjectsDetailsContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ProjectDetails);
+const ProjectsDetailsContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(ProjectDetails));
 
-export {ProjectsDetailsContainer};
+export { ProjectsDetailsContainer };

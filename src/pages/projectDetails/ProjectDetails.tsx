@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ProjectDetailsModel } from '../../reducers/projectDetails';
+import { ProjectDetailsModel } from '../../store/projectDetails';
 import './ProjectDetails.css';
 import { Link } from 'react-router-dom';
 
@@ -7,9 +7,12 @@ class ProjectDetails extends React.Component {
   props: any;
   projectDetails: ProjectDetailsModel; 
   componentWillMount() {
-    this.props.getProjectDetails(this.props.match.params.uri);
+    if (this.props.match && this.props.match.params.uri) {
+      this.props.getProjectDetails(this.props.match.params.uri);
+    }
   }
   componentWillReceiveProps(nextProps: any) {
+    // on change set the project details
     this.projectDetails = nextProps.projectDetails[nextProps.projectUri];
   }
   render() {

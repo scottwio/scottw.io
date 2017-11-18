@@ -12,9 +12,9 @@ const Menu = (props) => (
       </div>
       {props.menu.open ?
         <ul className="Nav">
-          <li><a onClick={() => { props.link('/'); }}>Home</a></li>
-          <li><a className="Nav-outline" onClick={() => { props.link('/projects'); }}>+ Projects</a></li>
-          {/* <a onClick={() => { props.link('/about'); }}>About</a> */}
+          <li><a onClick={() => { props.link('/'); }} >Home</a></li>
+          <li><a onClick={() => { props.link('/projects'); }} className="Nav-outline">+ Projects</a></li>
+          <li><a onClick={() => { props.link('/about'); }}>About</a></li>
         </ul>
         : ''
       }

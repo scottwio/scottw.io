@@ -35,7 +35,7 @@ function projectDetailsReducer(state: ProjectDetailsModel = new ProjectDetailsMo
 
 // thunks 
 function getProjectsDetailsAction(uri: string) {  
-    return function (dispatch: any) {
+    return (dispatch: any) => {
       return fetchProjectDetails(uri).then(
         res => dispatch(getProjectDetailsSucess(res)),
         error => dispatch(getProjectDetailsError(error))
