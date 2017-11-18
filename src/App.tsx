@@ -15,9 +15,6 @@ import { AboutContainer } from './containers/AboutContainer';
 
 class App extends React.Component {
   props: any;
-  constructor() {
-    super();
-  }
   closeMenu() {
     this.props.dispatch(toggleMenu());
   }
