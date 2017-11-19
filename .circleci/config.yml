@@ -45,6 +45,14 @@ jobs:
       - image: circleci/node:7.10
     steps:
       - checkout
+      - run:
+          name: install pip
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y python-dev python-pip
+      - run:
+          name: install aws cli
+          command: sudo pip install awscli
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
