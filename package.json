@@ -26,7 +26,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "sync": "aws s3 sync build s3://scottw.io --exclude=.DS_Store"
+    "sync": "aws s3 sync build s3://scottw.io --acl public-read --exclude=.DS_Store"
   },
   "devDependencies": {
     "@types/jest": "^21.1.2",
