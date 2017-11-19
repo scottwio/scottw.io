@@ -12,9 +12,14 @@
     {"name":"CSS", "id":5, "key":"m"},
     {"name":"HTML5", "id":6, "key":"l"}
   ],
-  "moreWork": [
-    {"text": "Circus Street", "uri": "circus-street"},
-    {"text": "The AA", "uri": "the-aa"},
-    {"text": "Monarch", "uri": "monarch"}
+  "links": [
+    {
+      "title": "More work",
+      "items": [
+        {"text": "Circus Street", "url": "/project-details/circus-street"},
+        {"text": "The AA", "url": "/project-details/the-aa"},
+        {"text": "Monarch", "url": "/project-details/monarch"}
+      ]
+    }
   ]
 }

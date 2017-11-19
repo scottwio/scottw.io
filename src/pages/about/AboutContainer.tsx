@@ -1,22 +1,22 @@
 import { connect } from 'react-redux';
-import { Menu } from '../core/Menu/Menu';
 import { withRouter } from 'react-router';
-import { fetchAbout } from '../lib/aboutService';
+import { About } from './About';
+import { geAboutAction } from '../../store/about';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    menu: state.menu
+    about: state.about
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     getAbout: (uri: string) => {
-      dispatch(fetchAbout());
+      dispatch(geAboutAction());
     },
   };
 };
 
-const AboutContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(Menu));
+const AboutContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(About));
 
 export { AboutContainer };

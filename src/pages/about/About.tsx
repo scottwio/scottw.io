@@ -9,7 +9,9 @@ class About extends React.Component {
   }
   render() {
     return (
-      <ProjectDetails  projectDetails={{}}/>
+      <div>
+        <ProjectDetails  projectDetails={this.props.about}/>
+      </div>
     );
   }
 }

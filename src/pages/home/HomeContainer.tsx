@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { Home } from '../pages/home/Home';
-import { toggleMenu } from '../store/menu';
+import { Home } from './Home';
+import { toggleMenu } from '../../store/menu';
 import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {

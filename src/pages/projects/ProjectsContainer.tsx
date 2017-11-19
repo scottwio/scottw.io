@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { getProjectsAction } from '../store/projects';
-import { Projects } from '../pages/projects/Projects';
+import { getProjectsAction } from '../../store/projects';
+import { Projects } from './Projects';
 import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {

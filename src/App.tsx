@@ -2,13 +2,13 @@ import * as React from 'react';
 import './App.css';
 import './Normalize.css';
 import { Route, withRouter } from 'react-router-dom';
-import { HomeContainer } from './containers/HomeContainer';
-import { MenuContainer } from './containers/MenuContainer';
-import { ProjectsContainer } from './containers/ProjectsContainer';
-import { ProjectsDetailsContainer } from './containers/ProjectsDetailsContainer';
+import { HomeContainer } from './pages/home/HomeContainer';
+import { MenuContainer } from './core/Menu/MenuContainer';
+import { ProjectsContainer } from './pages/projects/ProjectsContainer';
+import { ProjectsDetailsContainer } from './pages/projectDetails/ProjectsDetailsContainer';
 import { toggleMenu } from './store/menu';
 import { Switch } from 'react-router';
-import { AboutContainer } from './containers/AboutContainer';
+import { AboutContainer } from './pages/about/AboutContainer';
 // import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 // https://github.com/gianlucacandiotti/react-router-transitions

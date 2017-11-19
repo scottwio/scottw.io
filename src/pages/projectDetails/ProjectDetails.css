@@ -47,21 +47,21 @@
   .ProjectDetails-icons > span {
     margin-right: 0.9375rem; }
 
-.MoreWork {
+.Links {
   width: 100%;
   background-color: #1f1f1f;
   color: #ffffff;
   margin-top: 10rem;
   padding-top: 8.75rem;
   padding-bottom: 8.75rem; }
-  .MoreWork h4 {
+  .Links h4 {
     font-weight: normal;
     font-family: "graphik-medium", Arial, Helvetica, sans-serif;
     line-height: 4.0625rem;
     font-size: 28px;
     font-size: 1.75rem;
     margin-bottom: 6px; }
-  .MoreWork ul {
+  .Links ul {
     margin-left: 2.5rem; }
-  .MoreWork a {
+  .Links a {
     color: #ffffff; }

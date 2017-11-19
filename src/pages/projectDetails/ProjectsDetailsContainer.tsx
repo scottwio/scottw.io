@@ -1,12 +1,11 @@
 import { connect } from 'react-redux';
-import { ProjectDetails } from '../pages/projectDetails/ProjectDetails';
-import { getProjectsDetailsAction } from '../store/projectDetails';
+import { ProjectDetails } from './ProjectDetails';
+import { getProjectsDetailsAction } from '../../store/projectDetails';
 import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    projectDetails: state.projectDetails,
-    projectUri: ownProps.match.params.uri
+    projectDetails: state.projectDetails[ownProps.match.params.uri]
   };
 };
 
