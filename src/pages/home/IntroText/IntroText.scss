@@ -2,6 +2,7 @@
 @import 'mixins.scss';
 
 .IntroText  {
+  max-width: 90%;
   padding-top: 100px;
   padding-bottom: 200px;
   > h2{

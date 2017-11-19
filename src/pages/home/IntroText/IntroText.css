@@ -1,5 +1,6 @@
 /* Hide text off screen */
 .IntroText {
+  max-width: 90%;
   padding-top: 100px;
   padding-bottom: 200px; }
   .IntroText > h2 {
