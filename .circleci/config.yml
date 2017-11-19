@@ -5,52 +5,73 @@
 version: 2
 workflows:
   version: 2
-  build-to-aws:
+  build-test-and-deploy:
     jobs: 
-      - build:
+      - build
+      - test
+      - deploy:
           filters:
             branches:
               only:
                 - master
 jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
+  test:
     working_directory: ~/repo
-
+    docker:
+      - image: circleci/node:7.10
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-      - run:
-        name: Install dependencies
-        working_directory: /
-        command: |
-          apt-get -y -qq update
-          apt-get -y -qq install python3.4-dev
-          curl -O https://bootstrap.pypa.io/get-pip.py
-          python3.4 get-pip.py --user
-          pip install awscli --upgrade --user
       - run: yarn install
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run build
-      - run: npm run build
+      - run:
+          name: Run test
+          command: npm run test 
+  deploy: 
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:7.10
+    steps:
+      - checkout
+      - run:
+          name: install pip
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y python-dev python-pip
+      - run:
+          name: install aws cli
+          command: sudo pip install awscli
+      - run:
+          name: Sync to aws
+          command: npm run sync
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:7.10
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Run test
+          command: npm run test
+      - run:
+          name: Run build
+          command: npm run build
+
+
 
 
