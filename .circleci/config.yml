@@ -8,11 +8,14 @@ workflows:
   build-test-and-deploy:
     jobs: 
       - test
-      - build
-      - deploy:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master
+      - build-and-deploy:
           requires:
             - test
-            - build
           filters:
             branches:
               only:
@@ -36,7 +39,7 @@ jobs:
       - run:
           name: Run test
           command: npm run test 
-  deploy: 
+  build-and-deploy: 
     working_directory: ~/repo
     docker:
       - image: circleci/node:7.10
@@ -50,6 +53,9 @@ jobs:
       - run:
           name: install aws cli
           command: sudo pip install awscli
+      - run:
+          name: Run build
+          command: npm run build
       - run:
           name: Sync to aws
           command: npm run sync
