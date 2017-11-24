@@ -22,14 +22,26 @@
       margin-bottom: 1.375rem; }
 
 .ProjectDetails-hero {
+  position: relative;
+  height: 966px; }
+  .ProjectDetails-hero .ProjectDetails-hero-bg {
+    z-index: 2;
+    position: relative; }
+  .ProjectDetails-hero .Pacman-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    z-index: 1; }
+
+.ProjectDetails-hero-bg {
   height: 100%;
-  height: 966px;
   background-size: cover !important; }
   @media screen and (max-width: 600px) {
-    .ProjectDetails-hero {
+    .ProjectDetails-hero-bg {
       height: 550px; } }
   @media screen and (max-width: 400px) {
-    .ProjectDetails-hero {
+    .ProjectDetails-hero-bg {
       height: 505px; } }
 
 .ProjectDetails-link {

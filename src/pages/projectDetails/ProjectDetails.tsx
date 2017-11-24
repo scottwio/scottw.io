@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ProjectDetailsModel } from '../../store/projectDetails';
 import './ProjectDetails.css';
+import { Loading } from '../../core/Loading/Loading';
 
 class ProjectDetails extends React.Component {
   props: any;
@@ -19,11 +20,13 @@ class ProjectDetails extends React.Component {
 
               {/* IMAGE */}
               {this.props.projectDetails.heroImage ?
-                <div
-                  className="ProjectDetails-hero"
+              <div className="ProjectDetails-hero">
+                <div className="ProjectDetails-hero-bg"
                   style={{ background: `url(${this.props.projectDetails.heroImage.url}) no-repeat ${this.props.projectDetails.heroImage.positionX} center` }}
-                /> : ''
-              }
+                />
+                <Loading />
+              </div>
+              : ''}
 
               {/* DETAILS */}
               <div className="u-container u-side-pad">
