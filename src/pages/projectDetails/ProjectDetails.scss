@@ -34,18 +34,19 @@
     margin-top: -15px;
     z-index: 1;
   }
-
-}
-
-.ProjectDetails-hero-bg {
-  height:100%;
-  background-size: cover !important;
   @media screen and (max-width: $cat) {
     height: 550px;
   }
   @media screen and (max-width: $chicken) {
     height: 505px;
   }
+}
+
+
+.ProjectDetails-hero-bg {
+  height:100%;
+  background-size: cover !important;
+
 }
 
 .ProjectDetails-link {

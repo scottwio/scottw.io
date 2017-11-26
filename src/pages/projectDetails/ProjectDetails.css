@@ -33,16 +33,16 @@
     left: 50%;
     margin-top: -15px;
     z-index: 1; }
+  @media screen and (max-width: 600px) {
+    .ProjectDetails-hero {
+      height: 550px; } }
+  @media screen and (max-width: 400px) {
+    .ProjectDetails-hero {
+      height: 505px; } }
 
 .ProjectDetails-hero-bg {
   height: 100%;
   background-size: cover !important; }
-  @media screen and (max-width: 600px) {
-    .ProjectDetails-hero-bg {
-      height: 550px; } }
-  @media screen and (max-width: 400px) {
-    .ProjectDetails-hero-bg {
-      height: 505px; } }
 
 .ProjectDetails-link {
   color: #000000; }

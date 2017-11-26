@@ -70,7 +70,7 @@ class ProjectDetails extends React.Component {
 
           </section>
           :
-          <div> loading...π </div>
+          ''
           }
       </div>
     );
