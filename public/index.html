@@ -40,7 +40,7 @@
 
     <script>
       if (
-        document.location.hostname.search("scottw.io") !== -1 &&
+        document.location.hostname.search("scottw.io") >= 0 &&
         document.location.hostname.search("staging.scottw.io") === -1
       ) {
         console.log('GA started');

@@ -55,11 +55,11 @@ class ProjectDetails extends React.Component {
             <footer className="Links">
               <div className="u-container u-side-pad">
                 {this.props.projectDetails.links.map((link) => (
-                  <span>
+                  <span key={link.title}>
                     <h4>{link.title}</h4>
                     <ul>
                       {link.items.map((item) => (
-                        <li key={item.link}>
+                        <li key={item.url}>
                           <a href={item.url}>{item.text}</a>
                         </li>))}
                     </ul>
