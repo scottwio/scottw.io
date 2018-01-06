@@ -21,4 +21,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # project files
-src/public/fonts
+public/fonts
+src/**/*.css
