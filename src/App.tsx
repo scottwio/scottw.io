@@ -43,22 +43,4 @@ const AppWithRouter: any = withRouter((props) => (
   </div>
 ));
 
-/**
- * Scroll to the top of the page
- * when the route changes
- */
-// const ScrollToTop = () => {
-//   window.scrollTo(0, 0);
-//   return null;
-// };
-
-/**
- * For animation transition groups
- * @param props 
- */
-// const firstChild = props => {
-//   const childrenArray = React.Children.toArray(props.children);
-//   return childrenArray[0] || null;
-// };
-
 export default App;
