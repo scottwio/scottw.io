@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ProjectDetailsModel } from '../../store/projectDetails';
 import './ProjectDetails.css';
 import { Loading } from '../../core/Loading/Loading';
+import { ProjectGraphic } from './ProjectGraphic/ProjectGraphic';
 
 class ProjectDetails extends React.Component {
   props: any;
@@ -45,11 +46,13 @@ class ProjectDetails extends React.Component {
                     {this.props.projectDetails.icons.map((icon) => (<span key={icon.id}>{icon.key}</span>))}
                   </div> : ''}
 
-                <div className="ProjectDetails-images" />
-              </div>
-
+                  { this.props.projectDetails.images ?
+                    <div className={'ProjectDetails-images ' + (this.props.projectDetails.images[0].type === 'phone' ? 'ProjectDetails--phone' : 'ProjectDetails--desktop')}>
+                      {this.props.projectDetails.images.map((i) => (<ProjectGraphic image={i} key={i.url} />))}
+                    </div> : '' }
+                  </div>
             </div>
-
+            
             {/* LINKS */}
             {this.props.projectDetails.links ?
             <footer className="Links">

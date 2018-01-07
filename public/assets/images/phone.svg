@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="374px" height="759px" viewBox="0 0 374 759" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="14" y="51" width="347" height="618"></rect>
+    </defs>
+    <g id="Item" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-933.000000, -2549.000000)">
+        <g id="phone" transform="translate(933.000000, 2549.000000)">
+            <rect id="Rectangle-3" fill="#F0F0F0" x="0" y="0" width="374" height="759" rx="40"></rect>
+            <rect id="Rectangle-8" fill="#D8D8D8" x="140" y="22" width="95" height="7" rx="3.5"></rect>
+            <circle id="Oval-2" fill="#D8D8D8" cx="187" cy="714" r="30"></circle>
+            <rect id="Rectangle-7" fill="#FFFFFF" x="14" y="51" width="347" height="584"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

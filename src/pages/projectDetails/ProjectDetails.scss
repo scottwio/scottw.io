@@ -68,6 +68,45 @@
   }
 }
 
+.ProjectDetails-images {
+  margin-top: calculateRem(80px);
+  display: flex;
+
+  &.ProjectDetails--desktop {
+    flex-direction: column;
+  }
+
+  &.ProjectDetails--phone {
+    flex-direction: row;
+    flex: 1;
+    @media screen and (max-width: $cat) {
+      flex-direction: column;
+    }
+
+    .ProjectGraphic {
+      margin-left: calculateRem(34px); 
+      @media screen and (max-width: $cat) {
+        margin: 0;
+      }
+      max-width: 300px;
+      .ProjectGraphic-img {
+        position: absolute;
+        left: 3%;
+        top: 6.4%;
+        width: 93.6%;
+        z-index: 1;
+      }
+      &:first-child{
+        margin-left: 0;
+        @media screen and (max-width: $cat) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+
 
 .Links {
   width:100%;

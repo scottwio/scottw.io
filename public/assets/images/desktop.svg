@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1042px" height="839px" viewBox="0 0 1042 839" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>desktop</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1042" height="846" rx="8"></rect>
+    </defs>
+    <g id="Item" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-199.000000, -1641.000000)">
+        <g id="desktop" transform="translate(199.000000, 1641.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g mask="url(#mask-2)">
+                <g transform="translate(-8.000000, -7.000000)">
+                    <rect id="Rectangle-4" fill="#F0F0F0" x="0" y="0" width="1055" height="46"></rect>
+                    <rect id="Rectangle-5" fill="#FFFFFF" x="281" y="13" width="496" height="26" rx="5"></rect>
+                    <circle id="Oval" fill="#D8D8D8" cx="32" cy="27" r="5"></circle>
+                    <circle id="Oval" fill="#D8D8D8" cx="48" cy="27" r="5"></circle>
+                    <circle id="Oval" fill="#D8D8D8" cx="64" cy="27" r="5"></circle>
+                    <rect id="Rectangle-9" fill="#FFFFFF" x="8" y="46" width="1042" height="800"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
