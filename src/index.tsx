@@ -8,7 +8,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import './index.css';
 import { Provider, connect } from 'react-redux' ;
 import { combineReducers, createStore } from 'redux';
 import { menuReducer } from './store/menu';
