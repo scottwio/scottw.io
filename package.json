@@ -29,12 +29,12 @@
     "sync": "aws s3 sync build s3://scottw.io --acl public-read --exclude=.DS_Store"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.2",
-    "@types/node": "^8.0.34",
-    "@types/prop-types": "^15.5.2",
-    "@types/react": "^16.0.10",
-    "@types/react-dom": "^16.0.1",
-    "@types/react-router": "^4.0.15",
-    "@types/react-router-dom": "^4.0.8"
+    "@types/jest": "21.1.2",
+    "@types/node": "8.0.34",
+    "@types/prop-types": "15.5.2",
+    "@types/react": "16.0.10",
+    "@types/react-dom": "16.0.1",
+    "@types/react-router": "4.0.15",
+    "@types/react-router-dom": "4.0.8"
   }
 }

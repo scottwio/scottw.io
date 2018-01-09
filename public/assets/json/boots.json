@@ -2,8 +2,11 @@
   "uri": "boots",
   "title": "Boots - Health Coach",
   "description": "Boots Health Coach is a new application for people with type two diabetes. The project had both in-store and customer facing elements. The Angular SPA application was broken into four sub-applications, written in ES6 with a component based structure.",
-  "images": [{"type": "browser", "url":"http://www.myimage.com"}],
   "heroImage": {"url": "/assets/images/hero-boots.jpg", "positionX": "right" },
+  "images": [
+    {"type": "browser", "url":"/assets/images/screen-boots-1@2x.jpg" },
+    {"type": "browser", "url":"/assets/images/screen-boots-2@2x.jpg" }
+  ],
   "icons": [
     {"name":"Javascript", "id":1, "key":"n"},
     {"name":"Angular JS", "id":2, "key":"p"},

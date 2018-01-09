@@ -3,7 +3,10 @@
   "title": "Circus Street - Learning interface",
   "description": "Circus Street is a learning platform that teaches thousands of people digital marketing every month. I worked on the main learning interface which is built in Angular 1.x. One codebase serves as both the web application and hybrid mobile application.",
   "link": {"text": "www.circusstreet.com", "url": "https://circusstreet.com/"},
-  "images": [{"type": "browser", "url":"http://www.myimage.com"}],
+  "images": [
+    {"type": "browser", "url":"/assets/images/screen-cs-1@2x.jpg" },
+    {"type": "browser", "url":"/assets/images/screen-cs-2@2x.jpg" }
+  ],
   "heroImage": {"url": "/assets/images/hero-circus-street.jpg", "positionX": "center" },
   "icons": [
     {"name":"Javascript", "id":1, "key":"n"},
@@ -18,7 +21,7 @@
     {
       "title": "More work",
       "items": [
-        {"text": "Circus Street", "url": "/project-details/circus-street"},
+        {"text": "Boots", "url": "/project-details/boots"},
         {"text": "The AA", "url": "/project-details/the-aa"},
         {"text": "Monarch", "url": "/project-details/monarch"}
       ]

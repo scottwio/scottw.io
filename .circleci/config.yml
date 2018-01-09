@@ -38,7 +38,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Run test
-          command: npm run test 
+          command: yarn test 
   build-and-deploy: 
     working_directory: ~/repo
     docker:
@@ -64,10 +64,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Run build
-          command: npm run build
+          command: yarn build
       - run:
           name: Sync to aws
-          command: npm run sync
+          command: yarn sync
   build:
     working_directory: ~/repo
     docker:

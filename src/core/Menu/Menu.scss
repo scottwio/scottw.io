@@ -20,6 +20,7 @@ $burger-width: 50px;
 .Burger{
   cursor: pointer;
   position: absolute; 
+  z-index: 10;
   right:0;
   top: calculateRem(34px);
   height: $burger-height;

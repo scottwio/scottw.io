@@ -7,14 +7,14 @@
     {
       "title": "Contact Me",
       "items": [
-        {"text": "Drop me an email", "url": "/project-details/circus-street"}
+        {"text": "Drop me an email", "url": "mailto://contact@scottw.io"}
       ]
     },
     {
       "title": "Follow me",
       "items": [
-        {"text": "Twitter", "url": "/project-details/circus-street"},
-        {"text": "Github", "url": "/project-details/the-aa"}
+        {"text": "Twitter", "url": "https://twitter.com/scottwio"},
+        {"text": "Github", "url": "https://github.com/scottwio"}
       ]
     }
   ]

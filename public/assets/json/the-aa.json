@@ -11,7 +11,8 @@
     "positionX": "center" 
   },
   "images": [
-    {"type": "browser", "url":"http://www.myimage.com"}
+    {"type": "browser", "url":"/assets/images/screen-aa-1@2x.jpg" },
+    {"type": "browser", "url":"/assets/images/screen-aa-2@2x.jpg" }
   ],
   "icons": [
     {"name":"Javascript", "id":1, "key":"n"},
@@ -26,7 +27,7 @@
       "title": "More work",
       "items": [
         {"text": "Circus Street", "url": "/project-details/circus-street"},
-        {"text": "The AA", "url": "/project-details/the-aa"},
+        {"text": "Boots", "url": "/project-details/boots"},
         {"text": "Monarch", "url": "/project-details/monarch"}
       ]
     }
