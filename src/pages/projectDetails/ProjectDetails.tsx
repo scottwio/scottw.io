@@ -1,6 +1,11 @@
 import * as React from 'react';
-import { ProjectDetailsModel } from '../../store/projectDetails';
 import './ProjectDetails.css';
+<<<<<<< Updated upstream
+=======
+import { Loading } from '../../core/Loading/Loading';
+import { ProjectGraphic } from './ProjectGraphic/ProjectGraphic';
+import { ProjectDetailsModel } from '../../store/projectDetails/projectDetailsModel';
+>>>>>>> Stashed changes
 
 class ProjectDetails extends React.Component {
   props: any;

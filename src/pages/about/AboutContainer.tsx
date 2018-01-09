@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { About } from './About';
-import { geAboutAction } from '../../store/about';
+import { getAboutAction } from '../../store/about/aboutThunks';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     getAbout: (uri: string) => {
-      dispatch(geAboutAction());
+      dispatch(getAboutAction());
     },
   };
 };

@@ -11,31 +11,28 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import { Provider, connect } from 'react-redux' ;
 import { combineReducers, createStore } from 'redux';
-import { menuReducer } from './store/menu';
 import thunk from 'redux-thunk';
 import { applyMiddleware, compose } from 'redux';
-import { projectsReducer } from './store/projects';
-import { projectDetailsReducer } from './store/projectDetails';
 import { BrowserRouter } from 'react-router-dom';
 import { withRouter } from 'react-router';
-import { aboutReducer } from './store/about';
-
-// Reducers
-const reducer = combineReducers(
-  { 
-    menu: menuReducer, 
-    projects: projectsReducer,
-    projectDetails: projectDetailsReducer,
-    about: aboutReducer
-  }
-);
+import { aboutReducer } from './store/about/aboutReducer';
+import { menuReducer } from './store/menu/menuReducer';
+import { projectDetailsReducer } from './store/projectDetails/projectDetailsReducer';
+import { projectsReducer } from './store/Projects/projectsReducer';
 
 // fix for safari as it doesn't have devtools
 const composeEnhancers =  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() || compose;
 
 // Create Store
 const store = createStore(
-  reducer, 
+  combineReducers(
+    { 
+      menu: menuReducer, 
+      projects: projectsReducer,
+      projectDetails: projectDetailsReducer,
+      about: aboutReducer
+    }
+  ), 
   compose(
     applyMiddleware(thunk), 
     composeEnhancers
