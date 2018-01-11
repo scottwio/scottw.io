@@ -31,7 +31,7 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
-      - run: yarn install
+      - run: npm install
       - save_cache:
           paths:
             - node_modules
@@ -57,7 +57,7 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
-      - run: yarn install
+      - run: npm install
       - save_cache:
           paths:
             - node_modules
@@ -78,7 +78,7 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
-      - run: yarn install
+      - run: npm install
       - save_cache:
           paths:
             - node_modules
