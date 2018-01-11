@@ -1,6 +1,6 @@
-import { projectsActions } from './projectsActions';
 import { ProjectsModel } from './projectsModel';
 import { ActionTypes } from '../actionsTypes';
+import { projectsActions } from './projectsActions';
 
 export function projectsReducer(state: ProjectsModel = new ProjectsModel(), action: ActionTypes) {
   switch (action.type) {
