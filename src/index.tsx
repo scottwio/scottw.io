@@ -16,8 +16,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { aboutReducer } from './store/about/aboutReducer';
 import { menuReducer } from './store/menu/menuReducer';
-import { projectDetailsReducer } from './store/projectDetails/projectDetailsReducer';
 import { projectsReducer } from './store/projects/projectsReducer';
+import { projectDetailsReducer } from './store/projectDetails/projectDetailsReducer';
 
 // fix for safari as it doesn't have devtools
 const composeEnhancers =  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() || compose;
