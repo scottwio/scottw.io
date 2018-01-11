@@ -13,7 +13,6 @@ it('renders without crashing', () => {
   let menu = {open: false};
 
   ReactDOM.render(
-  
     <MemoryRouter>
       <Provider store={store}>
         <App menu={menu}/>
