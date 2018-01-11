@@ -20,6 +20,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-const ProjectsContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(Projects));
-
-export { ProjectsContainer };
+export const ProjectsContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(Projects));
