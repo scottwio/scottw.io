@@ -1,6 +1,6 @@
 import './Project.css';
 import * as React from 'react';
-import { ProjectModel } from '../../../store/projects';
+import { ProjectModel } from '../../../store/Projects/projectsModel';
 
 interface IProjectProps extends ProjectModel {
   link: any;

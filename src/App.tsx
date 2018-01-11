@@ -1,17 +1,13 @@
 import * as React from 'react';
 import './App.css';
 import './Normalize.css';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
 import { HomeContainer } from './pages/home/HomeContainer';
 import { MenuContainer } from './core/Menu/MenuContainer';
 import { ProjectsContainer } from './pages/projects/ProjectsContainer';
 import { ProjectsDetailsContainer } from './pages/projectDetails/ProjectsDetailsContainer';
-import { toggleMenu } from './store/menu';
-import { Switch } from 'react-router';
 import { AboutContainer } from './pages/about/AboutContainer';
-// import TransitionGroup from 'react-transition-group/TransitionGroup';
-
-// https://github.com/gianlucacandiotti/react-router-transitions
+import { toggleMenu } from './store/menu/menuActions';
 
 class App extends React.Component {
   props: any;
@@ -20,10 +16,11 @@ class App extends React.Component {
   }
   render() {
     return (
-      <AppWithRouter menu={this.props.menu} onCloseMenu={() => { this.closeMenu(); }} />
+        <AppWithRouter menu={this.props.menu} onCloseMenu={() => { this.closeMenu(); }} />
     );
   }
 }
+
 const AppWithRouter: any = withRouter((props) => (
   <div
     className={`MasterContainer

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { getProjectsAction } from '../../store/projects';
 import { Projects } from './Projects';
 import { withRouter } from 'react-router';
+import { getProjectsAction } from '../../store/Projects/projectsThunks';
 
 const mapStateToProps = (state, ownProps) => {
   return {

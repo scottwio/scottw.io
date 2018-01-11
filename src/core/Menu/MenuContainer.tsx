@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { toggleMenu } from '../../store/menu';
 import { Menu } from '../Menu/Menu';
 import { withRouter } from 'react-router';
+import { toggleMenu } from '../../store/menu/menuActions';
 
 const mapStateToProps = (state, ownProps) => {
   return {

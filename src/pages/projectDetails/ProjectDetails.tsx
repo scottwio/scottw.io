@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { ProjectDetailsModel } from '../../store/projectDetails';
 import './ProjectDetails.css';
 import { Loading } from '../../core/Loading/Loading';
 import { ProjectGraphic } from './ProjectGraphic/ProjectGraphic';
+import { ProjectDetailsModel } from '../../store/projectDetails/projectDetailsModel';
 
 class ProjectDetails extends React.Component {
   props: any;
