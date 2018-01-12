@@ -13,9 +13,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     getProjectDetails: (uri: string) => {
       dispatch(getProjectsDetailsAction(uri));
-    },
-    link: (url) => {
-      ownProps.history.push(url);
     }
   };
 };
