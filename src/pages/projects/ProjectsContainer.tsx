@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Projects } from './Projects';
 import { withRouter } from 'react-router';
-import { getProjectsAction } from '../../store/Projects/projectsThunks';
+import { getProjectsAction } from '../../store/projects/projectsThunks';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -20,6 +20,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-const ProjectsContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(Projects));
-
-export { ProjectsContainer };
+export const ProjectsContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(Projects));

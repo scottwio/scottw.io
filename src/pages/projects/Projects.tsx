@@ -2,7 +2,7 @@ import * as React from 'react';
 import './Projects.css';
 import { Project } from './Project/Project';
 
-class Projects extends React.Component {
+export class Projects extends React.Component {
   props: any;
   componentWillMount() {
     this.props.getProjects();
@@ -17,5 +17,3 @@ class Projects extends React.Component {
     );
   }
 }
-
-export {Projects};
