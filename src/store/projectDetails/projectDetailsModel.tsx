@@ -4,6 +4,7 @@ export class ProjectDetailsModel {
   title: string;
   description: string;
   link: ProjectDetailsLink;
+  links: ProjectDetailsLinks[];
   images: ProjectDetailsImage[];
   icons: ProjectDetailsIcon[];
   moreWork: ProjectDetailsMoreWork[];
@@ -33,4 +34,9 @@ class ProjectDetailsIcon {
 class ProjectDetailsMoreWork {
   text: string;
   uri: string;
+}
+
+class ProjectDetailsLinks {
+  title: string;
+  items: ProjectDetailsLink[];
 }

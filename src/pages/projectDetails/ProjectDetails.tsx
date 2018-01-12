@@ -4,10 +4,16 @@ import { Loading } from '../../core/Loading/Loading';
 import { ProjectGraphic } from './ProjectGraphic/ProjectGraphic';
 import { ProjectDetailsModel } from '../../store/projectDetails/projectDetailsModel';
 
-class ProjectDetails extends React.Component {
-  props: any;
+interface IProjectDetailsProps {
   projectDetails: ProjectDetailsModel;
+  getProjectDetails?: any;
+  match?: any;
+}
+
+class ProjectDetails extends React.Component {
+  props: IProjectDetailsProps;
   componentWillMount() {
+    
     if (this.props.match && this.props.match.params.uri) {
       this.props.getProjectDetails(this.props.match.params.uri);
     }
