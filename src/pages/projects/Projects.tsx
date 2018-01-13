@@ -11,7 +11,7 @@ export class Projects extends React.Component {
     return (
       <div className="Projects">
         {this.props.projects.items.map((item) => (
-          <Project link={this.props.link} key={item.uri} {...item} />
+          <Project link={this.props.link} key={item.uri} {...item}/>
         ))}
       </div>
     );
