@@ -17,7 +17,3 @@ export class Projects extends React.Component {
     );
   }
 }
-
-// projects
-// getProjects
-// link
