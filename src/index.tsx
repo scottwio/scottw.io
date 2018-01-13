@@ -6,7 +6,6 @@ declare global {
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider, connect } from 'react-redux' ;
 import { combineReducers, createStore } from 'redux';
@@ -18,6 +17,7 @@ import { aboutReducer } from './store/about/aboutReducer';
 import { menuReducer } from './store/menu/menuReducer';
 import { projectsReducer } from './store/projects/projectsReducer';
 import { projectDetailsReducer } from './store/projectDetails/projectDetailsReducer';
+import { App } from './App';
 
 // fix for safari as it doesn't have devtools
 const composeEnhancers =  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() || compose;
