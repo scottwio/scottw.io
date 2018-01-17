@@ -8,14 +8,10 @@ workflows:
   build-test-and-deploy:
     jobs: 
       - test
-      - build:
-          filters:
-            branches:
-              ignore:
-                - master
-      - build-and-deploy:
+      - build-deploy-prod:
           requires:
             - test
+            - build-deploy-staging
           filters:
             branches:
               only:
@@ -51,7 +47,7 @@ jobs:
           name: Run test
           command: yarn test 
 
-  build-and-deploy: 
+  build-deploy-prod: 
     working_directory: ~/repo
     docker:
       - image: efficienthealth/node-awscli:latest
@@ -94,26 +90,4 @@ jobs:
       - run:
           name: Sync to aws
           command: yarn sync:staging
-
-  build:
-    working_directory: ~/repo
-    docker:
-      - image: circleci/node:7.10
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-      - run: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run:
-          name: Run build
-          command: npm run build
-
-
-
 
