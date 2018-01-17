@@ -52,6 +52,7 @@ class ProjectDetails extends React.Component {
                     {this.props.projectDetails.icons.map((icon) => (<span key={icon.id}>{icon.key}</span>))}
                   </div> : ''}
 
+                  {/* IMAGES */}
                   { this.props.projectDetails.images ?
                     <div className={'ProjectDetails-images ' + (this.props.projectDetails.images[0].type === 'phone' ? 'ProjectDetails--phone' : 'ProjectDetails--desktop')}>
                       {this.props.projectDetails.images.map((i) => (<ProjectGraphic image={i} key={i.url} />))}

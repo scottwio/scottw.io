@@ -20,6 +20,13 @@ workflows:
             branches:
               only:
                 - master
+      - build-deploy-staging:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - dev
 
 jobs:
   test:
@@ -65,6 +72,28 @@ jobs:
       - run:
           name: Sync to aws
           command: yarn sync
+
+  build-deploy-staging: 
+    working_directory: ~/repo
+    docker:
+      - image: efficienthealth/node-awscli:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Run build
+          command: yarn build
+      - run:
+          name: Sync to aws
+          command: yarn sync:staging
 
   build:
     working_directory: ~/repo
