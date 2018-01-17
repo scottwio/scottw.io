@@ -1,7 +1,8 @@
 /**
  * Fetch about page data from the server
  */
-const fetchAbout = () => {
+export const fetchAbout: any = (): any => {
+
   return fetch(`/assets/json/about.json`, {
     method: 'GET',
     headers: {
@@ -11,5 +12,3 @@ const fetchAbout = () => {
   })
   .then(res => res.json());
 };
-
-export { fetchAbout };

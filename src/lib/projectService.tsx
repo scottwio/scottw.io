@@ -2,7 +2,7 @@
 /**
  * Fetch projects from the server
  */
-const fetchProjects = () => {
+export const fetchProjects: any = (): any => {
   return fetch(`/assets/json/projects.json`, {
     method: 'GET',
     headers: {
@@ -17,7 +17,7 @@ const fetchProjects = () => {
  * Fetch project details
  * @param {String} uri - uri of project
  */
-const fetchProjectDetails = (uri: string) => {
+export const fetchProjectDetails: any = (uri: string): any => {
   return fetch(`/assets/json/${uri}.json`, {
     method: 'GET',
     headers: {
@@ -27,5 +27,3 @@ const fetchProjectDetails = (uri: string) => {
   })
   .then(res => res.json());
 };
-
-export {fetchProjects, fetchProjectDetails};
