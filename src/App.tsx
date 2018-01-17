@@ -18,8 +18,8 @@ export class App extends React.Component {
     return (
       <div
         className={`MasterContainer
-      ${this.props.menu.open ? ' is-menu-open' : ''}
-      ${this.props.location.pathname === '/projects' ? ' is-dark' : ''}`}
+        ${this.props.menu.open ? ' is-menu-open' : ''}
+        ${this.props.location.pathname === '/projects' ? ' is-dark' : ''}`}
       >
         <MenuContainer router={this.props} />
         <section className="Page">
