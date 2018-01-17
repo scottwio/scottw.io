@@ -2,7 +2,6 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ProjectDetails } from './ProjectDetails';
 import { ProjectDetailsModel } from '../../store/projectDetails/projectDetailsModel';
-import { MemoryRouter } from 'react-router';
 import { ProjectGraphic } from './ProjectGraphic/ProjectGraphic';
 
 let mockProject: ProjectDetailsModel = require('../../../public/assets/json/the-aa.json');
