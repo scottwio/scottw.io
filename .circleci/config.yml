@@ -17,6 +17,7 @@ workflows:
               only:
                 - master
       - build-deploy-staging:
+          type: approval
           requires:
             - test
           filters:
